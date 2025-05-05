@@ -42,10 +42,7 @@
             const fileInput = document.getElementById('csvInput');
             const file = fileInput.files[0];
 
-            if (!file) {
-                alert("Veuillez sélectionner un fichier CSV.");
-                return;
-            }
+          
 
             const reader = new FileReader();
             reader.onload = function(e) {

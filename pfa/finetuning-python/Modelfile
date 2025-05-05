@@ -1,0 +1,161 @@
+FROM codellama
+
+# Paramètres du modèle
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER stop "</s>"
+
+# Système : Définition de l'assistant
+SYSTEM "Tu es un assistant spécialisé en programmation Python, machine learning et data science. Tu fournis des réponses précises, correctes et bien formatées."
+
+# Exemples d'apprentissage
+MESSAGE role=user "Write a replace method for a string class which replaces the given string with a given set of characters.\nstring = \"Hello World!\"\nreplace_with = \"Greetings!\""
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a function to find the number of distinct states in a given matrix.\nmatrix = [[1, 0, 0],\n          [1, 0, 1],\n          [1, 1, 1]]"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a nested loop to print every combination of numbers between 0-9"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a function to find the maximum difference between two numbers in a given array.\narr = [5, 3, 17, 11, 9]"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a function to generate the nth Fibonacci number.\n< noinput >"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a class to represent a 2D point with x and y coordinates."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write code that removes spaces from a given string.\nstring = \" A B C D \""
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a function that checks if a give number is even or odd."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write code to create a list of all prime numbers between 2 and 100."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Edit the following code to print out all even numbers from 1 to 10.\nfor i in range(1,11):\n    print(i)"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write code to find the sum of all numbers between 1 and 10."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a function to calculate the area of a given circle."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Follow the comments in the code to complete the program which prints a conversion table from Fahrenheit to Celsius.\n# This program prints a conversion table from Fahrenheit to Celsius\n\n# Print a heading for the table\n# TODO\n\n# Print the column headings\n# TODO\n\n# Calculate and print the table body\n# TODO"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Develop a classification algorithm in Python to predict whether a bird is a hawk or a falcon."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a function in Java for computing the factorial of a positive integer number."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Replace the placeholder with a for loop for iterating over the numbers from 1 to n and printing them.\nfor i in range(n):\n    # TODO"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Use try-except statements to detect and handle exceptions in the code.\nfor i in range(n):\n    x = 1/i"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Re-write the code segment as a list comprehension.\nnumbers = []\nfor i in range(10):\n    if i % 2 == 0:\n        numbers.append(i)"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Remove the boilerplate code from the program for printing 10 random numbers.\nimport random\n\n# Generate 10 random numbers\nfor i in range(10):\n    # TODO"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Modify the code to perform the mathematical expression “x to the power of y”.\n# Calculate x to the power of y\n# TODO"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a dictionary for counting the occurrence of each letter in the given string.\nstring = \"hello world\"\n#TODO"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Follow the comments to complete the code that finds the maximum value in an array.\n# Find the maximum value in an array\narr = [4, 5, 2, 8, 7]\n# TODO"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a Python function to convert a given string to lowercase.\nstring = \"FOO\""
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a Ruby code that prints out the median of a given array of numbers.\nnums = [1, 7, 3, 6]"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Edit the code to create a try-except block to handle the exception.\na = 5\nb = 0\n\nans = a/b"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a script using Bash that replaces all vowels with a number."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a function that takes an array as an argument and returns the sum of all the elements in the array.\narr = [1, 2, 3, 4, 5]"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Generate a random integer between 4 and 8 (inclusively)."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a function that takes a string and reverses the words.\ntext = \"Hello World!\""
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a function that takes in two numbers as arguments and returns the product of the two."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Compose a function named average_list which takes a list of numbers as its argument and computes the average."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Generate a snippet of code to extract all the URLs from the given string.\nThis string contains some urls such as https://www.google.com and https://www.facebook.com."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a code to convert a given spredsheet in csv format to json format."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Design a program to find the longest element in the given list.\n[10, 100, 200, 500, 400]"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a function to print all prime numbers between two given numbers."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write an algorithm in Python to determine if a number is even or odd."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Using the following code, clean up the bugs and make sure the output functions correctly.\ndef example_func(lst):\n   for element in lst:\n      if (type(element) == int):\n         lst.append(element + 5)\n   return lst\n \nexample_func([1, 2, \"hello\"])"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Parse the string and return the number of unique alphabets in the string.\nStringInput = \"apple\""
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Read the JSON string below and convert it into a dictionary.\njsonString = '{\"name\": \"John\", \"age\": 30, \"city\": \"New York\"}'"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Implement a function that finds the maximum element in a given array.\narr = [45, 7, 0, 82, 23]"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Validate whether the string contains only alphabets or not.\nmyString = \"abc123\""
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Rewrite the following code using ternary operator.\nnum1 = 5\nnum2 = 10\n\nif num1 < num2:\n    print(\"num1 is smaller than num2\")\nelse:\n    print(\"num1 is greater than or equal to num2\")"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a script to check if a given number is a palindrome or not.\ninputNumber = 121"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Edit the following code to remove the bugs.\ndef reverse_string(user_string): \n  if len(user_string) == 0: \n    return \"\" \n  else: \n    return reverse_string(user_string[1:]) + user_string[0] \n    \nprint(reverse_string(“test”))"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "What is the output of the following code?\nlist1 = ['a', 'b', 'c']\nlist2 = [1, 2, 3]\n\nfor x, y in zip(list1, list2):\n    print(x * y)"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a function to remove all whitespace characters from a given string.\nmyString = \"Hello   World    \""
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Edit the following code to add try catch block.\nx = \"5\"\ny = \"2\"\nsum = int(x) + int(y)\nprint(\"Sum of x and y is\", sum)"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Write a Python function that takes two lists of equal length and creates a dictionary of the elements in each list that have the same index.\nlist_one = [1, 2, 3, 4]\nlist_two = [\"a\", \"b\", \"c\", \"d\"]"
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Create a quick-sort algorithm in Python."
+MESSAGE role=assistant ""
+
+MESSAGE role=user "Develop an algorithm to find the value of n where n is the index of the Fibonacci sequence."
+MESSAGE role=assistant ""
+
